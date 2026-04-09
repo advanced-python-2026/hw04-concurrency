@@ -153,7 +153,13 @@ class TestCompareAll:
     def test_compare_all_returns_all_methods(self):
         """compare_all возвращает результаты для всех методов."""
         results = compare_all(n=30, repeat=4)
-        expected_methods = {"sequential", "threading", "multiprocessing", "executor", "interpreters"}
+        expected_methods = {
+            "sequential",
+            "threading",
+            "multiprocessing",
+            "executor",
+            "interpreters",
+        }
         assert set(results.keys()) == expected_methods
 
     def test_compare_all_structure(self):
