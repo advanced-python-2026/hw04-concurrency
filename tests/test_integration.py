@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import math
+import os
 import time
 
 import pytest
@@ -71,6 +72,10 @@ class TestMonteCarloParallel:
         assert 2.5 < result < 3.8
 
 
+@pytest.mark.skipif(
+    os.cpu_count() is not None and os.cpu_count() < 2,
+    reason="Need multiple cores",
+)
 class TestSpeedup:
     """Тесты производительности параллельной версии."""
 
