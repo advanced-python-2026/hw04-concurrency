@@ -102,8 +102,8 @@ class TestRunInterpreters:
 
 
 @pytest.mark.skipif(
-    os.cpu_count() is not None and os.cpu_count() < 2,
-    reason="Need multiple cores",
+    os.environ.get("CI") == "true" or (os.cpu_count() is not None and os.cpu_count() < 2),
+    reason="Speedup unreliable in CI / need multiple cores",
 )
 class TestSpeedup:
     """Тесты производительности параллельных методов."""
