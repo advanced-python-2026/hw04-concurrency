@@ -4,9 +4,9 @@ from pathlib import Path
 
 import pytest
 
-STUDENT_FILE = Path(__file__).resolve().parent.parent / "STUDENT.md"
+STUDENT_FILE = Path.cwd() / "STUDENT.md"
 HW_NUMBER = 4
-SEMESTER = "2026-spring"
+SEMESTER = "2027-spring"
 
 VARIANT_PRIMITIVES = {
     0: ("Lock", "Event", "Barrier"),
