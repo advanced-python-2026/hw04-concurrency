@@ -6,7 +6,7 @@ import pytest
 
 STUDENT_FILE = Path.cwd() / "STUDENT.md"
 HW_NUMBER = 4
-SEMESTER = "2027-spring"
+SEMESTER = "2026-fall"
 
 VARIANT_PRIMITIVES = {
     0: ("Lock", "Event", "Barrier"),
